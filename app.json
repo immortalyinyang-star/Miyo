@@ -1,4 +1,20 @@
 {
-  "name": "Miyo Android App",
-  "displayName": "Miyo"
+  "name": "Miyo",
+  "displayName": "Miyo - EPUB Reader",
+  "version": "1.0.0",
+  "description": "EPUB Reader for novels and books inspired by Kotatsu, Mihon, and Tachiyomi",
+  "author": "Miyo Development Team",
+  "license": "MIT",
+  "android": {
+    "package": "com.miyo.reader",
+    "versionCode": 1,
+    "permissions": [
+      "android.permission.READ_EXTERNAL_STORAGE",
+      "android.permission.WRITE_EXTERNAL_STORAGE",
+      "android.permission.MANAGE_EXTERNAL_STORAGE",
+      "android.permission.INTERNET",
+      "android.permission.ACCESS_NETWORK_STATE",
+      "android.permission.WAKE_LOCK"
+    ]
+  }
 }
