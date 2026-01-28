@@ -1,5 +1,5 @@
 {
-  go on"name": "miyo-reader",
+  "name": "miyo-reader",
   "version": "1.0.0",
   "description": "Miyo - EPUB Reader for novels and books inspired by Kotatsu, Mihon, and Tachiyomi",
   "main": "index.js",
