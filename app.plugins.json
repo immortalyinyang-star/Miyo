@@ -1,0 +1,13 @@
+{
+  "ios": {
+    "supportsTablet": true
+  },
+  "plugins": [
+    [
+      "react-native-screens",
+      {
+        "enableScreensOnAndroid": true
+      }
+    ]
+  ]
+}

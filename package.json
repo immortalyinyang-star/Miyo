@@ -1,0 +1,104 @@
+{
+  "name": "miyo-reader",
+  "version": "1.0.0",
+  "description": "Miyo - EPUB Reader for novels and books inspired by Kotatsu, Mihon, and Tachiyomi",
+  "main": "index.js",
+  "author": "Miyo Development Team",
+  "license": "MIT",
+  "scripts": {
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "android:build": "cd android && ./gradlew assembleRelease",
+    "ios": "react-native run-ios",
+    "web": "react-scripts start",
+    "build:web": "react-scripts build",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css}\"",
+    "type-check": "tsc --noEmit",
+    "prebuild": "npm run lint && npm run type-check",
+    "clean": "rm -rf node_modules package-lock.json && npm install",
+    "clean:android": "cd android && ./gradlew clean",
+    "cache:clear": "npm start -- --reset-cache"
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "react-native": "0.72.0",
+    "@react-navigation/native": "6.1.0",
+    "@react-navigation/bottom-tabs": "6.5.0",
+    "@react-navigation/drawer": "6.6.0",
+    "@react-navigation/stack": "6.3.0",
+    "react-native-screens": "3.20.0",
+    "react-native-safe-area-context": "4.5.0",
+    "react-native-gesture-handler": "2.13.0",
+    "react-native-reanimated": "3.3.0",
+    "redux": "4.2.1",
+    "react-redux": "8.1.1",
+    "redux-thunk": "2.4.2",
+    "@reduxjs/toolkit": "1.9.5",
+    "epubjs": "0.3.88",
+    "jszip": "3.10.1",
+    "xml2js": "0.6.2",
+    "react-native-fs": "2.20.0",
+    "react-native-sqlite-storage": "6.0.0",
+    "realm": "12.0.0",
+    "react-native-svg": "13.14.0",
+    "native-base": "3.4.28",
+    "react-native-linear-gradient": "2.8.1",
+    "react-native-permissions": "3.8.0",
+    "react-native-document-picker": "8.2.0",
+    "react-native-share": "8.0.1",
+    "lodash": "4.17.21",
+    "date-fns": "2.30.0",
+    "uuid": "9.0.0",
+    "axios": "1.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "*",
+    "@babel/preset-react": "*",
+    "@babel/preset-typescript": "*",
+    "babel-jest": "^29.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^2.0.0",
+    "jest": "^29.0.0",
+    "metro-react-native-babel-preset": "*",
+    "typescript": "^5.0.0"
+  },
+  "jest": {
+    "preset": "react-native",
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-native/extend-expect"
+    ],
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,css}": [
+      "prettier --write"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  }
+}
